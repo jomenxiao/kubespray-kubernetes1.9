@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![Kubernetes Logo](https://s28.postimg.org/lf3q4ocpp/k8s.png)
 
 ## Deploy a production ready kubernetes cluster
@@ -124,3 +125,6 @@ See also [Network checker](docs/netcheck.md).
 
 CI/end-to-end tests sponsored by Google (GCE), DigitalOcean, [teuto.net](https://teuto.net/) (openstack).
 See the [test matrix](docs/test_cases.md) for details.
+=======
+# kubespray
+>>>>>>> 477c1b4e1f07c232d447b63cb569a2e83022ad11
