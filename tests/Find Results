@@ -1,0 +1,146 @@
+Searching 566 files for "curl"
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/docs/netcheck.md:
+   16  any of the cluster nodes:
+   17  ```
+   18: curl http://localhost:31081/api/v1/connectivity_check
+   19  ```
+   20  Note that Kubespray does not invoke the check but only deploys the application, if
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/docs/weave.md:
+   36  ```
+   37  # On nodes
+   38: curl http://127.0.0.1:6784/status
+   39  # output on node1
+   40  Version: 2.0.1 (up to date; next check at 2017/08/01 13:51:34)
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/roles/kubernetes-apps/efk/fluentd/templates/fluentd-config.yml.j2:
+   32      # parse the time format produced by Docker. This will be
+   33      # submitted to Elasticsearch and should appear like:
+   34:     # $ curl 'http://elasticsearch-logging:9200/_search?pretty'
+   35      # ...
+   36      # {
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/roles/kubernetes-apps/istio/templates/istio.yml.j2:
+  973        # Port where Envoy listens (on local host) for admin commands
+  974        # You can exec into the istio-proxy container in a pod and
+  975:       # curl the admin port (curl http://localhost:15000/) to obtain
+  976        # diagnostic information from Envoy. See
+  977        # https://lyft.github.io/envoy/docs/operations/admin.html
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/roles/kubernetes/preinstall/defaults/main.yml:
+   11    - python-httplib2
+   12    - openssl
+   13:   - curl
+   14    - rsync
+   15    - bash-completion
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/roles/network_plugin/calico/tasks/main.yml:
+   93  - name: Calico | Check if calico network pool has already been configured
+   94    command: |-
+   95:     curl \
+   96        --cacert {{ etcd_cert_dir }}/ca.pem \
+   97        --cert {{ etcd_cert_dir}}/admin-{{ groups['etcd'][0] }}.pem \
+   ..
+  122  - name: Calico | Get calico configuration from etcd
+  123    command: |-
+  124:     curl \
+  125        --cacert {{ etcd_cert_dir }}/ca.pem \
+  126        --cert {{ etcd_cert_dir}}/admin-{{ groups['etcd'][0] }}.pem \
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/scripts/Find Results:
+    1: Searching 565 files for "curl"
+    2  
+    3  /Users/iamwlb/Documents/Workspace/ansible/kubespray/docs/netcheck.md:
+    4     16  any of the cluster nodes:
+    5     17  ```
+    6:    18: curl http://localhost:31081/api/v1/connectivity_check
+    7     19  ```
+    8     20  Note that Kubespray does not invoke the check but only deploys the application, if
+    .
+   11     36  ```
+   12     37  # On nodes
+   13:    38: curl http://127.0.0.1:6784/status
+   14     39  # output on node1
+   15     40  Version: 2.0.1 (up to date; next check at 2017/08/01 13:51:34)
+   ..
+   18     32      # parse the time format produced by Docker. This will be
+   19     33      # submitted to Elasticsearch and should appear like:
+   20:    34:     # $ curl 'http://elasticsearch-logging:9200/_search?pretty'
+   21     35      # ...
+   22     36      # {
+   ..
+   25    973        # Port where Envoy listens (on local host) for admin commands
+   26    974        # You can exec into the istio-proxy container in a pod and
+   27:   975:       # curl the admin port (curl http://localhost:15000/) to obtain
+   28    976        # diagnostic information from Envoy. See
+   29    977        # https://lyft.github.io/envoy/docs/operations/admin.html
+   ..
+   32     11    - python-httplib2
+   33     12    - openssl
+   34:    13:   - curl
+   35     14    - rsync
+   36     15    - bash-completion
+   ..
+   39     93  - name: Calico | Check if calico network pool has already been configured
+   40     94    command: |-
+   41:    95:     curl \
+   42     96        --cacert {{ etcd_cert_dir }}/ca.pem \
+   43     97        --cert {{ etcd_cert_dir}}/admin-{{ groups['etcd'][0] }}.pem \
+   ..
+   45    122  - name: Calico | Get calico configuration from etcd
+   46    123    command: |-
+   47:   124:     curl \
+   48    125        --cacert {{ etcd_cert_dir }}/ca.pem \
+   49    126        --cert {{ etcd_cert_dir}}/admin-{{ groups['etcd'][0] }}.pem \
+   ..
+   52      3  # Exits with 0, if the pipeline is good to go
+   53      4  
+   54:     5: CURL_ARGS="-fs --connect-timeout 5 --max-time 5 --retry-max-time 20 --retry 4 --retry-delay 5"
+   55      6  MAGIC="${MAGIC:-ci check this}"
+   56      7  
+   ..
+   58      9  issue=$(echo ${CI_BUILD_REF_NAME} | perl -ne '/^pr-(\d+)-\S+$/ && print $1')
+   59     10  # Get the user name from the PR comments with the wanted magic incantation casted
+   60:    11: user=$(curl ${CURL_ARGS} -v --tlsv1.2 "https://api.github.com/repos/kubernetes-incubator/kubespray/issues/${issue}/comments" \
+   61     12    | jq -M "map(select(.body | contains (\"$MAGIC\"))) | .[0] .user.login" | tr -d '"')
+   62     13  # Check for the required user group membership to allow (exit 0) or decline (exit >0) the pipeline
+   ..
+   64     16  	exit 1
+   65     17  fi
+   66:    18: curl ${CURL_ARGS} "https://api.github.com/orgs/kubernetes-incubator/members/${user}"
+   67     19  
+   68  
+   ..
+   70      1  #! /bin/bash
+   71      2  
+   72:     3: # curl -# -C - -o shebang-unit -v --tlsv1.2 https://raw.github.com/arpinum-oss/shebang-unit/master/releases/shebang-unit
+   73      4  # chmod +x shebang-unit
+   74      5  
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/scripts/premoderator.sh:
+    3  # Exits with 0, if the pipeline is good to go
+    4  
+    5: CURL_ARGS="-fs --connect-timeout 5 --max-time 5 --retry-max-time 20 --retry 4 --retry-delay 5"
+    6  MAGIC="${MAGIC:-ci check this}"
+    7  
+    .
+    9  issue=$(echo ${CI_BUILD_REF_NAME} | perl -ne '/^pr-(\d+)-\S+$/ && print $1')
+   10  # Get the user name from the PR comments with the wanted magic incantation casted
+   11: user=$(curl ${CURL_ARGS} -v --tlsv1.2 "https://api.github.com/repos/kubernetes-incubator/kubespray/issues/${issue}/comments" \
+   12    | jq -M "map(select(.body | contains (\"$MAGIC\"))) | .[0] .user.login" | tr -d '"')
+   13  # Check for the required user group membership to allow (exit 0) or decline (exit >0) the pipeline
+   ..
+   16  	exit 1
+   17  fi
+   18: curl ${CURL_ARGS} -v --tlsv1.2 "https://api.github.com/orgs/kubernetes-incubator/members/${user}"
+   19  
+
+/Users/iamwlb/Documents/Workspace/ansible/kubespray/tests/run-tests.sh:
+    1  #! /bin/bash
+    2  
+    3: # curl -# -C - -o shebang-unit https://raw.github.com/arpinum-oss/shebang-unit/master/releases/shebang-unit
+    4  # chmod +x shebang-unit
+    5  
+
+29 matches across 9 files

@@ -96,7 +96,7 @@
       --cacert {{ etcd_cert_dir }}/ca.pem \
       --cert {{ etcd_cert_dir}}/admin-{{ groups['etcd'][0] }}.pem \
       --key {{ etcd_cert_dir }}/admin-{{ groups['etcd'][0] }}-key.pem \
-      https://localhost:2379/v2/keys/calico/v1/ipam/v4/pool
+      -v --tlsv1.2 https://localhost:2379/v2/keys/calico/v1/ipam/v4/pool
   register: calico_conf
   retries: 4
   delay: "{{ retry_stagger | random + 3 }}"
@@ -125,7 +125,7 @@
       --cacert {{ etcd_cert_dir }}/ca.pem \
       --cert {{ etcd_cert_dir}}/admin-{{ groups['etcd'][0] }}.pem \
       --key {{ etcd_cert_dir }}/admin-{{ groups['etcd'][0] }}-key.pem \
-      https://localhost:2379/v2/keys/calico/v1/ipam/v4/pool
+      -v --tlsv1.2 https://localhost:2379/v2/keys/calico/v1/ipam/v4/pool
   register: calico_pools_raw
   retries: 4
   delay: "{{ retry_stagger | random + 3 }}"
