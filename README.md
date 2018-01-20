@@ -1,5 +1,5 @@
 # kubespray？
-kubespray是一个基于 Kubespray 部署 Kubernetes1.8.1 的 Ansible 脚本。
+kubespray是一个基于 Kubespray 部署 Kubernetes1.9.0 的 Ansible 脚本。
 # kubespray做了些什么？
 本项目基于[kubespray](https://github.com/kubernetes-incubator/kubespray)
 - 将国外网站镜像库迁移到阿里云镜像库，可以在国内加速安装Kubernetes1.9.0
