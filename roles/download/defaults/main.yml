@@ -80,19 +80,19 @@ netcheck_agent_img_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/k8s-netchecker
 netcheck_agent_tag: "{{ netcheck_version }}"
 netcheck_server_img_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/k8s-netchecker-server"
 netcheck_server_tag: "{{ netcheck_version }}"
-weave_kube_image_repo: "weaveworks/weave-kube"
+weave_kube_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/weave-kube"
 weave_kube_image_tag: "{{ weave_version }}"
-weave_npc_image_repo: "weaveworks/weave-npc"
+weave_npc_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/weave-npc"
 weave_npc_image_tag: "{{ weave_version }}"
-contiv_image_repo: "contiv/netplugin"
+contiv_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/netplugin"
 contiv_image_tag: "{{ contiv_version }}"
-contiv_auth_proxy_image_repo: "contiv/auth_proxy"
+contiv_auth_proxy_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/auth_proxy"
 contiv_auth_proxy_image_tag: "{{ contiv_version }}"
 
 nginx_image_repo: nginx
 nginx_image_tag: 1.13
 dnsmasq_version: 2.78
-dnsmasq_image_repo: "andyshinn/dnsmasq"
+dnsmasq_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/dnsmasq"
 dnsmasq_image_tag: "{{ dnsmasq_version }}"
 kubedns_version: 1.14.7
 kubedns_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/k8s-dns-kube-dns-amd64"
@@ -117,7 +117,7 @@ kibana_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/kibana"
 kibana_image_tag: "{{ kibana_version }}"
 
 helm_version: "v2.7.2"
-helm_image_repo: "lachlanevenson/k8s-helm"
+helm_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/k8s-helm"
 helm_image_tag: "{{ helm_version }}"
 tiller_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/tiller"
 tiller_image_tag: "{{ helm_version }}"

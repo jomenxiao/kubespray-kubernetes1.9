@@ -37,7 +37,7 @@ vault_download_vars:
 
 vault_container_name: kube-hashicorp-vault
 vault_temp_container_name: vault-temp
-vault_image_repo: "vault"
+vault_image_repo: "registry.cn-beijing.aliyuncs.com/iamwlb/vault"
 vault_image_tag: "{{ vault_version }}"
 
 vault_bind_address: 0.0.0.0
